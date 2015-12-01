@@ -176,6 +176,10 @@
                     // default translations
                     $scope.dict = ngQuillConfig.translations;
 
+                    $scope.toggleMenu = function () {
+                      $('#wrapper').toggleClass('toggled');
+                    }
+
                     $scope.shouldShow = function (formats) {
                         var okay = false,
                             i = 0;
