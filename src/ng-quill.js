@@ -181,8 +181,9 @@
                     };
 
                     $scope.toggleFullScreen = function() {
+                        console.log('from the toolbar');
                         $scope.isFullscreen = !$scope.isFullscreen;
-                      }
+                    };
 
                     $scope.shouldShow = function (formats) {
                         var okay = false,
