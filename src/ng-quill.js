@@ -178,6 +178,10 @@
 
                     $scope.toggleMenu = function () {
                       $('#wrapper').toggleClass('toggled');
+                    };
+
+                    $scope.test = function () {
+                      console.log('i clicks!');
                     }
 
                     $scope.shouldShow = function (formats) {
@@ -417,8 +421,8 @@
                                 '<span title="{{dict.image}}" class="ql-format-button ql-image" ng-if="shouldShow([\'image\'])"></span>' +
                             '</span>' +
                             '<span class="ql-format-group">' +
-                              '<a href=""><i class="fa fa-desktop"></i>' +
-                              '<span title="{{dict.image}}" class="ql-format-button fa fa-arrows-alt"></span>' +
+                              '<span title="{{dict.image}}" ng-click="test()" class="ql-format-button fa fa-desktop"></span>' +
+                              '<span title="{{dict.image}}" ng-click-"test()" class="ql-format-button fa fa-arrows-alt"></span>' +
                             '</span>' +
                         '</div>' +
                         '<div class="editor-container"></div>' +
