@@ -3,7 +3,7 @@
     'use strict';
     var app;
     // declare ngQuill module
-    app = angular.module('ngQuill', []);
+    app = angular.module('ngQuill', ['FBAngular']);
 
     app.provider('ngQuillConfig', function () {
         var config = {

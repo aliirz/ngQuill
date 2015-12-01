@@ -1,7 +1,9 @@
 {
   "name": "ngQuill",
   "version": "1.1.1",
-  "main": ["src/ng-quill.min.js"],
+  "main": [
+    "src/ng-quill.min.js"
+  ],
   "description": "AngularJS directive for the QuillJS rich text editor",
   "authors": [
     "Bengt Weiße <bengtler@gmail.com>"
@@ -16,7 +18,8 @@
   ],
   "dependencies": {
     "quill": "0.20.1",
-    "angular": "1.4.7"
+    "angular": "1.4.7",
+    "angular-fullscreen": "~1.0.1"
   },
   "keywords": [
     "quill",
