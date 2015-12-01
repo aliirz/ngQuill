@@ -180,9 +180,9 @@
                       $('#wrapper').toggleClass('toggled');
                     };
 
-                    $scope.test = function () {
-                      console.log('i clicks!');
-                    }
+                    $scope.toggleFullScreen = function() {
+                        $scope.isFullscreen = !$scope.isFullscreen;
+                      }
 
                     $scope.shouldShow = function (formats) {
                         var okay = false,
@@ -421,8 +421,8 @@
                                 '<span title="{{dict.image}}" class="ql-format-button ql-image" ng-if="shouldShow([\'image\'])"></span>' +
                             '</span>' +
                             '<span class="ql-format-group">' +
-                              '<span title="{{dict.image}}" ng-click="test()" class="ql-format-button fa fa-desktop"></span>' +
-                              '<span title="{{dict.image}}" ng-click-"test()" class="ql-format-button fa fa-arrows-alt"></span>' +
+                              '<span title="Change Terminal" ng-click="test()" class="ql-format-button fa fa-desktop"></span>' +
+                              '<span title="FullScreen" ng-click="toggleFullscreen()" class="ql-format-button fa fa-arrows-alt"></span>' +
                             '</span>' +
                         '</div>' +
                         '<div class="editor-container"></div>' +
