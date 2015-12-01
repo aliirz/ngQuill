@@ -291,7 +291,10 @@
             return $templateCache.put('ngQuill/template.html',
                 '<div id="content-container">' +
                     '<div class="advanced-wrapper">' +
-                        '<div class="toolbar toolbar-container" ng-if="toolbar" ng-show="toolbarCreated && showToolbar">' +
+                        '<div class="navbar navbar-inverse toolbar toolbar-container" ng-if="toolbar" ng-show="toolbarCreated && showToolbar">' +
+                            '<span class="ql-format-group">' +
+                              '<a href="" ng-click="toggleMenu()"><img src="/assets/images/volta-icon.png"/></a>' +
+                            '</span>' +
                             '<span class="ql-format-group" ng-if="shouldShow([\'font\', \'size\'])">' +
                                 '<select title="{{dict.font}}" class="ql-font" ng-if="shouldShow([\'font\'])">' +
                                     '<option ng-repeat="option in fontfamilyOptions" value="{{option.alias}}">{{option.label}}</option>' +
