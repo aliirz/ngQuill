@@ -135,7 +135,7 @@
                 require: 'ngModel',
                 restrict: 'E',
                 templateUrl: 'ngQuill/template.html',
-                link: function ($scope, element, attr, ngModel) {
+                link: function ($scope, element, attr, ngModel, FullScreen) {
                     var config = {
                             theme: $scope.theme || 'snow',
                             readOnly: $scope.readOnly || false,
@@ -181,8 +181,10 @@
                     };
 
                     $scope.toggleFullScreen = function() {
-                        console.log('from the toolbar');
-                        $scope.isFullscreen = !$scope.isFullscreen;
+                            if (Fullscreen.isEnabled())
+                              Fullscreen.cancel();
+                           else
+                              Fullscreen.all();
                     };
 
                     $scope.shouldShow = function (formats) {
@@ -225,16 +227,6 @@
                                         + '<a href="javascript:;" class="insert">' + $scope.dict.insert + '</a>'
                         };
                     }
-
-                    Quill.registerModule('counter', function(quill, options) {
-                      var container = document.querySelector('#counter');
-                      quill.on('text-change', function() {
-                        var text = quill.getText();
-                        // There are a couple issues with counting words
-                        // this way but we'll fix these later
-                        container.innerHTML = text.split(/\s+/).length;
-                      });
-                    });
                     // init editor
                     editor = new Quill(element[0].querySelector('.advanced-wrapper .editor-container'), config);
 
