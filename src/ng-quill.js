@@ -423,7 +423,7 @@
                             '</span>' +
                             '<span class="ql-format-group">' +
                               '<span title="Change Terminal" ng-click="test()" class="ql-format-button fa fa-desktop"></span>' +
-                              '<span title="FullScreen" ng-click="toggleFullscreen()" class="ql-format-button fa fa-arrows-alt"></span>' +
+                              '<span title="FullScreen" ng-click="toggleFullScreen()" class="ql-format-button fa fa-arrows-alt"></span>' +
                             '</span>' +
                         '</div>' +
                         '<div class="editor-container"></div>' +
