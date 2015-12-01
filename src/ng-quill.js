@@ -23,8 +23,8 @@
             }],
             // default fontFamilies
             fontFamilies: [{
-                label: 'Sans Serif',
-                alias: 'sans-serif'
+                label: 'Iconsolata',
+                alias: 'Inconsolata'
             }, {
                 label: 'Serif',
                 alias: 'serif'
