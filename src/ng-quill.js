@@ -221,8 +221,19 @@
                         };
                     }
 
+                    Quill.registerModule('counter', function(quill, options) {
+                      var container = document.querySelector('#counter');
+                      quill.on('text-change', function() {
+                        var text = quill.getText();
+                        // There are a couple issues with counting words
+                        // this way but we'll fix these later
+                        container.innerHTML = text.split(/\s+/).length;
+                      });
+                    });
                     // init editor
                     editor = new Quill(element[0].querySelector('.advanced-wrapper .editor-container'), config);
+
+
 
                     // add toolbar afterwards with a timeout to be sure that translations has replaced.
                     if ($scope.toolbar && $scope.toolbar === 'true') {
@@ -404,6 +415,10 @@
                             '<span class="ql-format-group" ng-if="shouldShow([\'link\', \'image\'])">' +
                                 '<span title="{{dict.link}}" class="ql-format-button ql-link" ng-if="shouldShow([\'link\'])"></span>' +
                                 '<span title="{{dict.image}}" class="ql-format-button ql-image" ng-if="shouldShow([\'image\'])"></span>' +
+                            '</span>' +
+                            '<span class="ql-format-group">' +
+                              '<a href=""><i class="fa fa-desktop"></i>' +
+                              '<span title="{{dict.image}}" class="ql-format-button fa fa-arrows-alt"></span>' +
                             '</span>' +
                         '</div>' +
                         '<div class="editor-container"></div>' +
