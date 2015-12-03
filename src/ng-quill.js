@@ -305,7 +305,7 @@
                     '<div class="advanced-wrapper">' +
                         '<div class="navbar navbar-inverse toolbar toolbar-container" ng-if="toolbar" ng-show="toolbarCreated && showToolbar">' +
                             '<span class="ql-format-group">' +
-                              '<a href="" ng-click="toggleMenu()"><i class="fa fa-bars"/></a>' +
+                              '<span title="Toggle Sidebar" ng-click="toggleMenu()" class="ql-format-button fa fa-bars"></span>' +
                             '</span>' +
                             '<span class="ql-format-group" ng-if="shouldShow([\'font\', \'size\'])">' +
                                 '<select title="{{dict.font}}" class="ql-font" ng-if="shouldShow([\'font\'])">' +
