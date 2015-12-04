@@ -18,7 +18,7 @@
   ],
   "dependencies": {
     "quill": "0.20.1",
-    "angular": "1.4.7",
+    "angular": "1.4.8",
     "angular-fullscreen": "~1.0.1"
   },
   "keywords": [
