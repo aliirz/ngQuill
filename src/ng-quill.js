@@ -190,7 +190,7 @@
                         $('.fa').addClass('orange');
                         $('.title').addClass('orange');
                         $('.counter').addClass('orange');
-                        $('ql-editor').addClass('orange');
+                        $('.ql-editor').addClass('orange');
                       }
                       else {
                         $scope.themeapplied = false;
@@ -199,7 +199,7 @@
                         $('.fa').removeClass('orange');
                         $('.title').removeClass('orange');
                         $('.counter').removeClass('orange');
-                        $('ql-editor').removeClass('orange');
+                        $('.ql-editor').removeClass('orange');
                       }
                     };
 
