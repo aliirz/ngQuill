@@ -190,14 +190,16 @@
                         $('.fa').addClass('orange');
                         $('.title').addClass('orange');
                         $('.counter').addClass('orange');
+                        $('ql-editor').addClass('orange');
                       }
                       else {
-                        $scope.themeapplied = true;
+                        $scope.themeapplied = false;
 
                         $('.ql-format-group').removeClass('orange');
                         $('.fa').removeClass('orange');
                         $('.title').removeClass('orange');
                         $('.counter').removeClass('orange');
+                        $('ql-editor').removeClass('orange');
                       }
                     };
 
