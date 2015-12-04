@@ -180,6 +180,27 @@
                       $('#wrapper').toggleClass('toggled');
                     };
 
+                    $scope.themeapplied = false;
+                    $scope.toggleThemes = function () {
+                      if (!$scope.themeapplied) {
+
+                        $scope.themeapplied = true;
+
+                        $('.ql-format-group').addClass('orange');
+                        $('.fa').addClass('orange');
+                        $('.title').addClass('orange');
+                        $('.counter').addClass('orange');
+                      }
+                      else {
+                        $scope.themeapplied = true;
+
+                        $('.ql-format-group').removeClass('orange');
+                        $('.fa').removeClass('orange');
+                        $('.title').removeClass('orange');
+                        $('.counter').removeClass('orange');
+                      }
+                    };
+
                     $scope.toggleFullScreen = function() {
                             if (Fullscreen.isEnabled())
                               Fullscreen.cancel();
@@ -414,7 +435,7 @@
                                 '<span title="{{dict.image}}" class="ql-format-button ql-image" ng-if="shouldShow([\'image\'])"></span>' +
                             '</span>' +
                             '<span class="ql-format-group">' +
-                              '<span title="Change Terminal" ng-click="test()" class="ql-format-button fa fa-desktop"></span>' +
+                              '<span title="Change Terminal" ng-click="toggleThemes()" class="ql-format-button fa fa-desktop"></span>' +
                               '<span title="FullScreen" ng-click="toggleFullScreen()" class="ql-format-button fa fa-arrows-alt"></span>' +
                             '</span>' +
                         '</div>' +
