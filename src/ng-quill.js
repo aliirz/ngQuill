@@ -187,7 +187,7 @@
                         $scope.themeapplied = true;
 
                         $('.ql-format-group').addClass('orange');
-                        $('.fa').addClass('orange');
+                        $('.btmbtn').addClass('orange');
                         $('.title').addClass('orange');
                         $('.counter').addClass('orange');
                         $('.ql-editor').addClass('orange');
@@ -196,7 +196,7 @@
                         $scope.themeapplied = false;
 
                         $('.ql-format-group').removeClass('orange');
-                        $('.fa').removeClass('orange');
+                        $('.btmbtn').removeClass('orange');
                         $('.title').removeClass('orange');
                         $('.counter').removeClass('orange');
                         $('.ql-editor').removeClass('orange');
